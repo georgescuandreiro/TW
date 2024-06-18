@@ -1,98 +1,238 @@
 nav {
     --inaltime-meniu: 2rem;
-    --latime-buton: 100px;
-    --culoare-text-meniu: black;
     height: var(--inaltime-meniu);
     background-color: var(--culoare-deschisa);
     position: sticky;
     top: 0;
-    margin-left: calc(-1*var(--dim-spatiere));
-    left: 0;
-    width: calc(100vw - 16px);
+    width: 100%;
     z-index: 100;
 }
 
-@property --p {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 10%;
-}
-@property --l {
-    syntax: '<length>';
-    inherits: false;
-    initial-value: 10px;
-}
-@property --a {
-    syntax: '<angle>';
-    inherits: false;
-    initial-value: 10deg;
-}
-
-#hamburger, #ch-menu, #acasa-mediu {
+nav #hamburger {
     display: none;
 }
 
-.meniu, .meniu * {
-    margin: 0px;
-    padding: 0px;
+nav input#ch-menu {
+    display: none;
 }
 
-.meniu {
+nav ul.meniu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.meniu li {
-    border: 1px solid var(--culoare-inchisa);
-    font-weight: bold;
-    height: var(--inaltime-meniu);
-    width: var(--latime-buton); 
-    text-align: center;
-    box-sizing: border-box;
-    transition: --p 1s,--l 1s,--a 1s;
-    list-style-type: none;
-    --p: 0%;
-    --l: 10px;
-    --a: 10deg;
-    background: radial-gradient(var(--culoare-deschisa) var(--p), var(--culoare-foarte-deschisa));
+nav ul.meniu li {
+    position: relative;
 }
 
-.meniu li:hover {
-    --p: 100%;
-    --l: 80px;
-    --a: 180deg;
-}
-
-.meniu li:hover>a, .meniu li:hover>div {
-    color: var(--culoare-text-meniu-selectat);
-}
-
-.meniu a, .meniu div {
-    text-decoration: none;
-    color: var(--culoare-text-meniu);
+nav ul.meniu li > div,
+nav ul.meniu li > a {
     display: block;
-    height: 100%;
+    padding: 0 15px; /* Ajustare padding pentru a se încadra în înălțimea meniului */
+    text-decoration: none;
+    color: white;
+    height: var(--inaltime-meniu);
     line-height: var(--inaltime-meniu);
-    cursor: pointer;
-    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 2s ease-in-out;
 }
 
-.meniu ul {
+nav ul.meniu li > div:hover,
+nav ul.meniu li > a:hover {
+    background-color: var(--culoare-inchisa);
+}
+
+nav ul.meniu li > div::before,
+nav ul.meniu li > a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(var(--culoare-deschisa) 0%, var(--culoare-intermediara));
+    transform: translate(-50%, -50%);
+    transition: width 2s ease-in-out, height 2s ease-in-out;
+    z-index: -1;
+}
+
+nav ul.meniu li > div:hover::before,
+nav ul.meniu li > a:hover::before {
+    width: 300%;
+    height: 300%;
+}
+
+nav ul.meniu li ul {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--culoare-deschisa);
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Asigurare submeniuri peste alte elemente */
 }
 
-.meniu>li:hover>ul {
+nav ul.meniu li ul li {
+    display: block;
+    text-align: left;
+}
+
+nav ul.meniu li ul li > a {
+    display: block;
+    padding: 10px;
+    color: black;
+    background-color: var(--culoare-deschisa);
+    position: relative;
+    transition: background-color 2s ease-in-out;
+}
+
+nav ul.meniu li ul li > a:hover {
+    background-color: var(--culoare-inchisa);
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul.meniu li ul li > a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, var(--culoare-inchisa) 0%, var(--culoare-inchisa) 100%);
+    transform: translate(-50%, -50%);
+    transition: width 2s ease-in-out, height 2s ease-in-out;
+    z-index: -1;
+}
+
+nav ul.meniu li ul li > a:hover::before {
+    width: 300%;
+    height: 300%;
+}
+
+nav ul.meniu li:hover > ul {
     display: block;
     transform: scaleY(0) scaleX(0);
     opacity: 0;
-    animation: animatie_submeniu 1s linear forwards;
-    animation-iteration-count: 1;
+    animation: showSubMenu 1s forwards;
     transform-origin: top left;
 }
 
-@keyframes animatie_submeniu {
-    100% {
-        transform: scaleY(1);
+@keyframes showSubMenu {
+    to {
+        transform: scaleY(1) scaleX(1);
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    nav ul.meniu li > div,
+    nav ul.meniu li > a {
+        font-size: 0.8rem;
+    }
+
+    nav ul.meniu li#home-icon > div > .home-text {
+        display: none;
+    }
+
+    nav ul.meniu li#home-icon > div > .fas {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    nav ul.meniu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav #hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav input#ch-menu:checked + ul.meniu {
+        display: block;
+        position: absolute;
+        top: var(--inaltime-meniu);
+        width: 100%;
+        background: var(--culoare-deschisa);
+        animation: revealMenu 1s forwards;
+        /* clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); */
+    }
+
+    nav input#ch-menu:checked + ul.meniu li {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav input#ch-menu:checked + ul.meniu li > a,
+    nav input#ch-menu:checked + ul.meniu li > div {
+        padding: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul.meniu li ul {
+        position: inherit;
+        top: 100%;
+        left: 33%;
+        transform: translateX(-50%);
+        max-height: none; /* Eliminăm max-height */
+        overflow-y: visible; /* Eliminăm overflow-ul */
+    }
+
+    nav ul.meniu li:hover ul {
+        display: block;
+        /* clip-path: none; */
+        /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+        transition: clip-path 0.3s;
+    }
+
+    @keyframes revealMenu {
+        0% {
+            clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+        }
+        10% {
+            clip-path: polygon(0 0, 10% 0, 12% 50%, 10% 100%, 0 100%);
+        }
+        20% {
+            clip-path: polygon(0 0, 20% 0, 25% 50%, 20% 100%, 0 100%);
+        }
+        30% {
+            clip-path: polygon(0 0, 30% 0, 37% 50%, 30% 100%, 0 100%);
+        }
+        40% {
+            clip-path: polygon(0 0, 40% 0, 50% 50%, 40% 100%, 0 100%);
+        }
+        50% {
+            clip-path: polygon(0 0, 50% 0, 62% 50%, 50% 100%, 0 100%);
+        }
+        60% {
+            clip-path: polygon(0 0, 60% 0, 74% 50%, 60% 100%, 0 100%);
+        }
+        70% {
+            clip-path: polygon(0 0, 70% 0, 86% 50%, 70% 100%, 0 100%);
+        }
+        80% {
+            clip-path: polygon(0 0, 80% 0, 98% 50%, 80% 100%, 0 100%);
+        }
+        90% {
+            clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+        }
+        100% {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
     }
 }
