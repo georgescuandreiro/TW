@@ -1,355 +1,278 @@
 <!DOCTYPE html>
 <html lang="ro">
-    <head>
-        <title> Gadget Haven - Shopping online </title>
-        <meta charset="UTF-8"><!-- codificarea în memorie a caracterelor-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- va fi explicat când ajungem la CSS -->
-        <meta name="keywords" content="gadget, huse, laptopuri gadget, gadget Romania, tableta, smartphone gadgethaven, laptopuri gaming, periferice, casti, casti wireless, pret redus, high-tech, Bucuresti"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
-        <meta name="description" content="“Descoperă gadgeturile viitorului la GadgetHaven, unde tehnologia se împletește cu pasiunea și inovația prinde viață. De la dispozitive inteligente la accesorii high-tech, suntem puntea către un univers digital fascinant. Bine ai venit în lumea noastră a electronicii!” 🚀🌟."><!-- descrierea paginii, adesea apare sub link când sunt afișate rezultatele căutării -->
-        <meta name="author" content="Magazin GadgetHaven">  <!-- autorul/autoarea paginii-->
-        <link rel="apple-touch-icon" sizes="180x180" href="./resurse/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="./resurse/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="194x194" href="./resurse/favicon/favicon-194x194.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="./resurse/favicon/android-chrome-192x192.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./resurse/favicon/favicon-16x16.png">
-        <link rel="manifest" href="./resurse/favicon/site.webmanifest">
-        <link rel="mask-icon" href="./resurse/favicon/safari-pinned-tab.svg" color="#489cc3">
-        <link rel="shortcut icon" href="./resurse/favicon/favicon.ico">
-        <meta name="msapplication-TileColor" content="#2b5797">
-        <meta name="msapplication-config" content="./resurse/favicon/browserconfig.xml">
-        <meta name="theme-color" content="#489cc3">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
-        <!-- <link rel="stylesheet" href="resurse/css/reset.css" type="text/css" /> -->
-        <link rel="stylesheet" href="resurse/css/general.css" type="text/css" />
-        <link rel="stylesheet" href="resurse/css/layout.css" type="text/css" />
-        <link rel="stylesheet" href="resurse/css/nav.css" type="text/css" />
-        <link rel="stylesheet" href="resurse/css/stil.css" type="text/css" />
-    </head>
-    <body>
-        <header>
-            <h1>Bine ai venit la Gadget Haven</h1>
-        </header>
-        <nav>
-            <label id="hamburger" for="ch-menu">
-                <img src="resurse/imagini/Hamburger_icon_alb.png" alt="menu">
-            </label>
-            <input id="ch-menu" type="checkbox">
-            <ul class="meniu">
-                <li><div id="acasa">Acasa</div><div id="acasa-mediu"><span class="fas fa-regular fa-house"></span></div>
-                    <ul>
-                        <li><a href="#welcome">Bine ati venit</a></li>
-                        <li><a href="#subcapitol-1">Trending</a></li>
-                        <li><a href="#subcapitol-2">Reduceri</a></li>
-                        <li><a href="#subcapitol-informatii">Informatii</a></li>
-                        <li><a href="./cos.html">Cos</a></li>
-                        <li><a href="./cont.html">Cont</a></li>
-                        <li><a href="./resurse/favicon/android-chrome-512x512.png">icon</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Inregistrare</a></li>
-                <li><div>Despre</div>
-                    <ul>                        
-                        <li><a href="despre.html#prezentare">Prezentare</a></li>
-                        <li><a href="despre.html#istoric">Istoric</a></li>
-                        <li><a href="despre.html#motivatie">Motivatie</a></li>
-                        <li><a href="despre.html#galerie">Galerie</a></li>
-                    </ul>
-                </li>
-                <li><div>Produse</div>
-                    <ul>
-                        <li><a href="http://www.google.com">Toate</a></li>
-                        <li><a href="#">Laptopuri</a></li>
-                        <li><a href="#">Tablete</a></li>
-                        <li><a href="#">Gaming</a></li>
-                    </ul>
-                
-                </li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <main>
-            <div id="grid-pagina">
-                <section id="welcome">
-                    <h2>Bine ati venit</h2>
-                    <p class="intro" >Vă mulțumim că ne vizitați site-ul.</p>
-                    
-                    <div class="intro-oferte"><div>Laptopuri</div><div>Smartphone-uri</div><div>Tablete</div><div>Casti</div>Accesorii<div></div></div>
-                    <p class="anunt intro">Descoperă gadgeturile viitorului la Gadget Haven.</p>
-                    <div id="dv-prezentare-1">
-                        <div id="dv-prezentare">
-                        <figure>
-                            <picture>
-                                <!-- il ia pe primul care se potriveste cu query-ul din media-->
-                                <!-- <source srcset="./resurse/imagini/laptop-acer.png" media="(max-width:700px)"/>
-                                <source srcset="./resurse/imagini/laptop-lenovo.png" media="(max-width:1200px)"/>
-                                <img src="./resurse/imagini/laptop-macbook-pro.png" alt="text" title="Laptop"/> -->
-                            </picture>
-                            <figcaption>Laptop</figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <hr class="laptopuri"/>
-                <div id="container-video">
-                    <!-- <img class="macbook" src="resurse/imagini/laptop-macbook-pro.png" alt="macbook"> -->
-                    <div id="centrare-video">
-                        <div id="clip-video">
-                            <div id="stil-video">
-                                <video width="320" height="240"  playsinline autoplay loop muted>
-                                    <source src="resurse/video/video.mp4" type="video/mp4">
-                                    <source src="resurse/video/video.ogv" type="video/ogv">
-                                    <!-- <track default src="data:image/png;base64, V0VCVlRUIC0gQ2lvY29sYXTEgwoKMDA6MDAuMDAwIC0tPiAwMDowMy4wMDAgbGluZTowCkNpb2NvbGF0xIMhISEKCjAwOjAzLjAwMCAtLT4gMDA6MDcuMDAwIGxpbmU6MApNdWx0xIMgY2lvY29sYXTEgyEhISEKCjAwOjA5LjAwMCAtLT4gMDA6MTQuMDAwIGxpbmU6MApVcHMsIGFtIG11cmTEg3JpdCBtYXNhIQoKMDA6MTQuNTAwIC0tPiAwMDoxOS4wMDAgbGluZTowCk51IGNvbnRlYXrEgyEgQ2lvY29sYXTEg8SDxIPEg8SDxIMhCgo=" kind="captions" srclang="ro" label="romana">
-                                    <track src="data:image/png;base64, V0VCVlRUIC0gQ2hvY29sYXRlDQoNCjAwOjAwLjAwMCAtLT4gMDA6MDMuMDAwDQpDaG9jb2xhdGUhISENCg0KMDA6MDMuMDAwIC0tPiAwMDowNy4wMDANCkxvdHMgb2YgY2hvY29sYXRlISEhIQ0KDQowMDowOS4wMDAgLS0+IDAwOjE0LjAwMA0KT3VwcywgdGFibGUgZ290IGRpcnR5IQ0KDQowMDoxNC41MDAgLS0+IDAwOjE5LjAwMA0KRG9lc24ndCBtYXR0ZXIhIENob2NvbGF0ZSEhIQ0KDQo=" kind="captions" srclang="en" label="engleza"> -->
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </section>
-                <section id="promotii">
-                    <h2>Promoții</h2>
-                    <article>
-                        <h3 class="titlu">Super ofertă de weekend</h3>
-                        <p><b>Gadget Haven</b> oferă <b>reduceri de <s>10%</s> <ins datetime="2024-03-19">15%</ins></b> pentru toate produsele cumpărate în intervalul 10-14.</p>
-                        <p>Oferta este valabilă doar în zilele de sâmbătă și duminică la sediile <abbr title="Gadget Haven">CD</abbr>.</p>
-                        <p>în cazul în care cumpărați mai mult de zece produse primiți si un card de fidelitate pentru Salvare!</p>
-                    </article>
-                    <article>
-                        <h3>Ofertă pachet</h3>
-                        <p>Gadget Haven oferă pachete cuprinzând:</p>
-                        <ol>
-                            <li><i lang="en">Laptop</i></li>
-                            <li>Tastatura</li>
-                            <li>Mouse</li>
-                            <li>Un <i>rucksack</i></li>
-                        </ol>
-                        
-                    </article>
-                    <article>
-                        <h3 class="titlu bcd">Promotie 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed suscipit mauris. Proin commodo, arcu in mollis ullamcorper, tortor elit pulvinar dui, at vehicula mauris felis laoreet mauris. Nunc vulputate risus ex.</p>
-                        <ol>
-                            <li>Suspendisse tempus imperdiet elit in.</li>
-                            <li>Quisque feugiat, mi eget condimentum</li>
-                            <li>Nunc vitae semper lacus, sed hendrerit purus </li>
-                            <li>Aenean imperdiet lorem vitae velit porta</li>
-                        </ol>
-                        
-                    </article>
-                    <article>
-                        <h3>Promotie 4</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed suscipit mauris. Proin commodo, arcu in mollis ullamcorper, tortor elit pulvinar dui, at vehicula mauris felis laoreet mauris. Nunc vulputate risus ex.</p>
-                        <ol>
-                            <li>Suspendisse tempus imperdiet elit in.</li>
-                            <li>Quisque feugiat, mi eget condimentum</li>
-                            <li>Nunc vitae semper lacus, sed hendrerit purus </li>
-                            <li>Aenean imperdiet lorem vitae velit porta</li>
-                        </ol>
-                        
-                    </article>
-                </section>
-                <section id="produse">
-                    <h2>Produsele noastre</h2>
-                    <section>
-                        <h3>Laptopuri</h3>
-                        <p>Avem Laptopuri pentru:</p>
-                        <ul>
-                            <li>Gaming</li>
-                            <li>Office</li>
-                            <li>Uz general</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h3>Gadget-uri pentru casă</h3>
-                        <p>Gadget-uri:</p>
-                        <ul>
-                            <li>Prize inteligente</li>
-                            <li>Becuri smart</li>
-                            <li>Camere de supraveghere</li>
-                        </ul>
-                    </section>
-                    
-                    <section>
-                        <h3>Accesorii pentru telefoane</h3>
-                        <ul>
-                            <li>Huse</li>
-                            <li>Folii de protectie</li>
-                            <li>Incarcatoare</li>
-                        </ul>
-                    </section>
-                </section>
-                <section id="orar">
-                    <h2>Orar</h2>
-                    <table id="tab-orar">
-                        <thead>
-    
-                            <tr>
-                                <th>Cod</th>
-                                <th>Perioadă</th>
-                                <th>Zi</th>
-                                <th>Interval dimineata</th>
-                                <th>Pauza de masa</th>
-                                <th>Interval seară</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td rowspan="5">Zile<br/>Lucrătoare</td>
-                                <td>Luni</td>
-                                <td>9-12</td>
-                                <td>12-14</td>
-                                <td>14-20</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                
-                                <td>Marti</td>
-                                <td>9-12</td>
-                                <td>12-14</td>
-                                <td>14-21</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                
-                                <td>Miercuri</td>
-                                <td>9-11</td>
-                                <td>11-13</td>
-                                <td>14-21</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                
-                                <td>Joi</td>
-                                <td>9-11</td>
-                                <td>11-13</td>
-                                <td>14-21</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                
-                                <td>Vineri</td>
-                                <td>9-12</td>
-                                <td>12-14</td>
-                                <td>14-19</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td rowspan="2">Weekend</td>
-                                <td>Sambata</td>
-                                <td>10-12</td>
-                                <td>12-13</td>
-                                <td>13-16</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Duminica</td>
-                                <td>10-14</td>
-                                <td>-</td>
-                                <td>inchis</td>
-                            </tr>
-                        </tbody>
-                        <tfoot><tr><td colspan="6">Închis cu ocazia sărbătorilor legale.</td></tr></tfoot>
-                    </table> 
-                <!-- </section>
-                    <figure id="fig1" class="fg-img">
-                        <img src="resurse/imagini/laptop-macbook-pro.png" alt="laptopuri">
-                        <figcaption>Laptop 1</figcaption>
-                    </figure>
-                    <figure id="fig2" class="fg-img">
-                        <img src="resurse/imagini/laptop-macbook-pro.png" alt="laptopuri">
-                        <figcaption>Laptop 2</figcaption>
-                    </figure>
-                    <figure  id="fig3" class="fg-img">
-                        <img src="resurse/imagini/laptop-macbook-pro.png" alt="laptopuri">
-                        <figcaption>Laptop 3</figcaption>
-                    </figure> -->
-                <section id="anunturi">
-                    <h2>Anunțuri</h2> <p><time datetime="2024-03-05">3 martie 2024</time> <strong>Oferta valabilă până la data de 21 noiembrie 2024. Stocurile sunt limitate.</strong></p>
-                    <p><time datetime="2024-06-05">5 iunie 2024</time> Vara Tehnologica - Răcorire cu gadgeturi! Descoperă cele mai noi ventilatoare inteligente și sisteme de climatizare. Tablete și laptopuri pentru vacanțe: Lucrează sau te distrează oriunde te afli!</p>
-                    <p><time datetime="2024-08-15">15 august 2024</time> Întoarcerea la școală - Laptopuri ultraportabile pentru studenți: Performanță și stil într-un singur pachet. Căști Bluetooth pentru orele lungi de studiu sau relaxare.</p>
-                    <p><time datetime="2024-11-20">20 noiembrie 2024</time> Black Friday Tech Deals: Reduceri masive la smartphone-uri, gadgeturi și accesorii. Ceasuri inteligente pentru a-ți surprinde cei dragi. </p>
-                    <p><time datetime="2025-01-01">1 ianuarie 2025</time> Un an nou fericit!</p>
-                    <p><time datetime="2025-01-03">3 ianuarie 2025</time> An Nou, Tehnologie Nouă - Rezoluția ta pentru 2025: Upgrade la un nou laptop!</p>
-                    <p><time datetime="2025-03-11">11 martie 2025</time> Primăvara Tehnologică - Boxe portabile pentru picnicuri și petreceri în aer liber. </p>
-                </section>
-                <section id="index-intrebari">
-                    <h2>Întrebări frecvente</h2>
-                    <details><summary>Cum pot să returnez un produs defect?</summary>
-                        <p>Contactați serviciul nostru de asistență clienți la numărul de telefon afișat pe site.</p>
-                    </details>
-                    <details><summary>Cum pot să verific starea comenzii mele?</summary>
-                        <p>Pentru a verifica starea comenzii, accesați secțiunea “Urmărirea comenzii” de pe site-ul nostru. Introduceți numărul comenzii și adresa de e-mail asociată pentru a afla detalii despre livrare.</p>
-                    </details>
-                    <details><summary>Care sunt opțiunile de plată acceptate?</summary>
-                        <p>Acceptăm plăți cu carduri de credit/debit, PayPal și plata la livrare. Alegeți metoda preferată la finalizarea comenzii.</p>
-                    </details>
-                    <details><summary>Cum pot să contactez serviciul clienți</summary>
-                        <p>Suntem disponibili pentru asistență la numărul de telefon afișat pe site sau prin e-mail la adresa contact@gadgethaven.ro.</p>
-                    </details>
-                </section>
-            </div>
-            <section id="galerie-statica">
-                <h2>Galerie</h2>
-                <div id="grid-galerie">
-                    <!-- <figure>
-                        <img src="resurse/imagini/laptop-lenovo.png" alt="laptopuri">
-                        <figcaption>Laptopuri</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="resurse/imagini/laptop-lenovo.png" alt="laptopuri">
-                        <figcaption>Laptopuri</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="resurse/imagini/laptop-lenovo.png" alt="Laptopuri">
-                        <figcaption>Laptopuri</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="resurse/imagini/laptop-lenovo.png" alt="Laptopuri">
-                        <figcaption>Laptopuri</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="resurse/imagini/laptop-lenovo.png" alt="Laptopuri">
-                        <figcaption>Laptopuri</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="resurse/imagini/laptop-lenovo.png" alt="Laptopuri">
-                        <figcaption>Laptopuri</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="resurse/imagini/laptop-lenovo.png" alt="Laptopuri">
-                        <figcaption>Laptopuri</figcaption>
-                    </figure> -->
-                </div>
+<head>
+    <title> Gadget Haven - Shopping online </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="gadget, huse, laptopuri gadget, gadget Romania, tableta, smartphone gadgethaven, laptopuri gaming, periferice, casti, casti wireless, pret redus, high-tech, Bucuresti">
+    <meta name="description" content="“Descoperă gadgeturile viitorului la GadgetHaven, unde tehnologia se împletește cu pasiunea și inovația prinde viață. De la dispozitive inteligente la accesorii high-tech, suntem puntea către un univers digital fascinant. Bine ai venit în lumea noastră a electronicii!” 🚀🌟.">
+    <meta name="author" content="Magazin GadgetHaven">
+    <link rel="apple-touch-icon" sizes="180x180" href="./resurse/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./resurse/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="./resurse/favicon/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./resurse/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./resurse/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./resurse/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./resurse/favicon/safari-pinned-tab.svg" color="#489cc3">
+    <link rel="shortcut icon" href="./resurse/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="./resurse/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#489cc3">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="resurse/css/general.css" type="text/css" />
+    <link rel="stylesheet" href="resurse/css/layout.css" type="text/css" />
+    <link rel="stylesheet" href="resurse/css/nav.css" type="text/css" />
+    <link rel="stylesheet" href="resurse/css/stil.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="resurse/css/menu.css" type="text/css" /> -->
+    <link rel="stylesheet" href="resurse/css/print.css" type="text/css" media="print" />
+</head>
+<body>
+    <header>
+        <h1>Gadget Haven</h1>
+    </header>
+    <nav>
+        <label id="hamburger" for="ch-menu">
+            <img src="resurse/imagini/Hamburger_icon_alb.png" alt="menu">
+        </label>
+        <input id="ch-menu" type="checkbox">
+        <ul class="meniu">
+            <li><div id="acasa">Acasa</div><div id="acasa-mediu"><span class="fas fa-regular fa-house"></span></div>
+                <ul>
+                    <li><a href="#zona5">Welcome</a></li>
+                    <li><a href="#subcapitol-1">Trending</a></li>
+                    <li><a href="#subcapitol-2">Reduceri</a></li>
+                    <li><a href="#subcapitol-informatii">Informatii</a></li>
+                    <li><a href="./cos.html">Cos</a></li>
+                    <li><a href="./cont.html">Cont</a></li>
+                    <li><a href="./resurse/favicon/android-chrome-512x512.png">icon</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Inregistrare</a></li>
+            <li><div>Despre</div>
+                <ul>
+                    <li><a href="despre.html#prezentare">Prezentare</a></li>
+                    <li><a href="despre.html#istoric">Istoric</a></li>
+                    <li><a href="despre.html#motivatie">Motivatie</a></li>
+                    <li><a href="despre.html#galerie">Galerie</a></li>
+                </ul>
+            </li>
+            <li><div>Produse</div>
+                <ul>
+                    <li><a href="http://www.google.com">Toate</a></li>
+                    <li><a href="#">Laptopuri</a></li>
+                    <li><a href="#">Tablete</a></li>
+                    <li><a href="#">Gaming</a></li>
+                </ul>
+            </li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="grid-container">
+            <section id="zona1" class="zona">
+                <h2>Prezentare</h2>
+                <p><b>Gadget Haven</b> este locul unde tehnologia prinde viață. Oferim o gamă largă de dispozitive electronice și accesorii high-tech. </p>
             </section>
-            <section id="retete">
-                <h2>Prezentare oferte</h2>
-                <p>Top oferte</p>
-                <div class="container-iframe">
-                    <div class="taburi-iframe">
-                        <a href="https://www.youtube.com/embed/jXBX0WZpppM?si=LYprRdCj1CUsYNle" target="ifr-video">Laptop-acer</a>
-                        <a href="https://www.youtube.com/embed/3jK6zcGCKVA?si=bddUdB-xuYvBAdRP" target="ifr-video" >laptop-lenovo</a>
-                        <a href="https://www.youtube.com/embed/0pg_Y41waaE" target="ifr-video" >laptop-macbook-pro</a><br/>
-                    </div>
-                    <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/jXBX0WZpppM?si=LYprRdCj1CUsYNle" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+            <section id="zona5" class="zona">
+                <h2>Utilizatori online</h2>
+                <p>Utilizatori online: <b>34</b></p>
             </section>
-        </main>
-        <footer>
-            <div class="container" id="container">
-                <a href="#" id="link-top" title="mergi sus"></a>
-                <a href="#" id="sagetica"></a>
+            <section id="zona6" class="zona">
+                <h2>Date despre utilizator și statistici</h2>
+                <p>Contul dvs.: <b>Utilizator Premium</b> <i class="fa-solid fa-crown"></i></p>
+                <p>Comenzi efectuate: <b>12</b></p>
+            </section>
+            <section id="zona7" class="zona">
+                <h2>Date despre site și server</h2>
+                <p><i class="fa-solid fa-server"></i> Uptime server: <b>99.99%</b></p>
+                <p><i class="fa-brands fa-product-hunt"></i>Număr total de produse: <b>345</b></p>
+            </section>
+            <section id="zona3" class="zona">
+                <h2>Calendar de evenimente</h2>
+                <p>Nu ratați evenimentele noastre speciale de <i>Black Friday</i> și <i>Cyber Monday</i>!</p>
+            </section>
+            <section id="zona2" class="zona">
+                <h2>Tabel orar</h2>
+                <table id="tab-orar">
+                    <thead>
+                        <tr>
+                            <th>Cod</th>
+                            <th>Perioadă</th>
+                            <th>Zi</th>
+                            <th>Interval dimineață</th>
+                            <th>Pauză de masă</th>
+                            <th>Interval seară</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td rowspan="5">Zile<br/><strong title="Zile Lucrătoare">Lucrătoare</strong></td>
+                            <td>Luni</td>
+                            <td>9-12</td>
+                            <td>12-14</td>
+                            <td>14-20</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Marți</td>
+                            <td>9-12</td>
+                            <td>12-14</td>
+                            <td>14-21</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Miercuri</td>
+                            <td>9-11</td>
+                            <td>11-13</td>
+                            <td>14-21</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Joi</td>
+                            <td>9-11</td>
+                            <td>11-13</td>
+                            <td>14-21</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Vineri</td>
+                            <td>9-12</td>
+                            <td>12-14</td>
+                            <td>14-19</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td rowspan="2">Weekend</td>
+                            <td>Sâmbătă</td>
+                            <td>10-12</td>
+                            <td>12-13</td>
+                            <td>13-16</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Duminică</td>
+                            <td>10-14</td>
+                            <td>-</td>
+                            <td>Închis</td>
+                        </tr>
+                    </tbody>
+                    <tfoot><tr><td colspan="6">Închis cu ocazia sărbătorilor legale.</td></tr></tfoot>
+                </table>
+            </section>
+            <section id="zona4" class="zona">
+                <h2>Anunțuri</h2>
+                <p><b>Promoții speciale</b> la toate laptopurile și perifericele noastre!</p>
+                <details>
+                    <summary>Detalii promoții</summary>
+                    <p>Oferim reduceri de până la 50% pentru anumite produse.</p>
+                </details>
+                <h3 class="titlu">Super ofertă de weekend</h3>
+                <p><b>Gadget Haven</b> oferă <b>reduceri de <s>10%</s> <ins datetime="2024-03-19">15%</ins></b> pentru toate produsele cumpărate în intervalul 10-14.</p>
+                <p>Oferta este valabilă doar în zilele de sâmbătă și duminică la sediile <abbr title="Gadget Haven">GH</abbr>.</p>
+                <p>În cazul în care cumpărați mai mult de zece produse primiți și un card de fidelitate pentru Salvare!</p>
+            </section>
+            <section id="zona8" class="zona">
+                <h2>Alte tipuri de conținut</h2>
+                <p>Descoperă cele mai noi gadgeturi și tehnologii la Gadget Haven!</p>
+                <ol>
+                    <li>Laptopuri de top</li>
+                    <li>Telefoane performante</li>
+                    <li>Accesorii inovative</li>
+                </ol>
+                <h2>Intrebari frecvente <abbr>FAQ</abbr></h2>
+                <details><summary>Cum pot să returnez un produs defect?</summary>
+                    <p>Contactați serviciul nostru de asistență clienți la numărul de telefon afișat pe site.</p>
+                </details>
+                <details><summary>Cum pot să verific starea comenzii mele?</summary>
+                    <p>Pentru a verifica starea comenzii, accesați secțiunea “Urmărirea comenzii” de pe site-ul nostru. Introduceți numărul comenzii și adresa de e-mail asociată pentru a afla detalii despre livrare.</p>
+                </details>
+                <details><summary>Care sunt opțiunile de plată acceptate?</summary>
+                    <p>Acceptăm plăți cu carduri de credit/debit, PayPal și plata la livrare. Alegeți metoda preferată la finalizarea comenzii.</p>
+                </details>
+                <details><summary>Cum pot să contactez serviciul clienți</summary>
+                    <p>Suntem disponibili pentru asistență la numărul de telefon afișat pe site sau prin e-mail la adresa contact@gadgethaven.ro.</p>
+                </details>
+            </section>
+        </div>
+        <section id="galerie-statica">
+            <h2>Galerie</h2>
+            <div id="grid-galerie">
+                <!-- Exemplu de figuri pentru galerie -->
+                <figure>
+                    <img src="resurse/imagini/apple-watch-series-7.jpg" alt="smart-watch">
+                    <figcaption>Apple Watch Series 7</figcaption>
+                </figure>
+                <figure>
+                    <img src="resurse/imagini/gopro-hero10.jpg" alt="camere">
+                    <figcaption>GoPro HERO10</figcaption>
+                </figure>
+                <figure>
+                    <img src="resurse/imagini/kindle-paperwhite.jpg" alt="e-read">
+                    <figcaption>Kindle Paperwhite</figcaption>
+                </figure>
+                <figure>
+                    <img src="resurse/imagini/laptop-acer.png" alt="laptopuri">
+                    <figcaption>Laptop Acer</figcaption>
+                </figure>
+                <figure>
+                    <img src="resurse/imagini/laptop-hp-spectre.jpg" alt="laptopuri">
+                    <figcaption>Laptop HP Spectre</figcaption>
+                </figure>
+                <figure>
+                    <img src="resurse/imagini/oculus-quest-2.jpg" alt="VR">
+                    <figcaption>Oculus Quest 2</figcaption>
+                </figure>
+                <figure>
+                    <img src="resurse/imagini/logitech-mx-master-3.jpg" alt="periferice">
+                    <figcaption>Mouse Logitech MX Master 3</figcaption>
+                </figure>
             </div>
-            <address>
-                Strada x, nr 1, Bucuresti, sector 3, Romania <br/>
-                <a href="tel:+40720424123">Telefon</a><br/>
-                <a href="mailto:GadgetHaven@gmail.com">E-mail</a><br/>
-                <a href="https://wa.me/1XXXXXX">Whatsapp</a><br/>
-                <a href="">Skype</a><br/>
-            </address>
-            <small>
-                Copyright &copy; <time datetime="2024-03-10 15:53">duminica, 10 martie 2024</time>
-            </small>
-        </footer>
-    </body>  
+        </section>
+        <section id="oferte">
+            <h2>Prezentare oferte</h2>
+            <p>Top oferte</p>
+            <div class="container-iframe">
+                <div class="taburi-iframe">
+                    <a href="https://www.youtube.com/embed/jXBX0WZpppM?si=LYprRdCj1CUsYNle" target="ifr-video">Laptop Acer</a>
+                    <a href="https://www.youtube.com/embed/3jK6zcGCKVA?si=bddUdB-xuYvBAdRP" target="ifr-video">Laptop Lenovo</a>
+                    <a href="https://www.youtube.com/embed/0pg_Y41waaE" target="ifr-video">Laptop MacBook Pro</a>
+                </div>
+                <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/jXBX0WZpppM?si=LYprRdCj1CUsYNle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>Vizitaţi partenerii noştrii
+                <a href="http://www.itgalaxy.ro" target="_blank" style="margin-right: 10px;">Link partener</a>
+                <i class="fa-solid fa-heart fa-beat" style="--fa-beat-scale: 2.0;"></i>
+            </p>
+            <p>Click pentru a descarca imaginea 
+                <a href="resurse/imagini/laptop-acer.png" download>Downladeaza imaginea</a>
+            </p>
+        </div>
+        <a href="#">Înapoi la început</a>
+        <div class="container" id="container">
+            <a href="#" id="link-top" title="mergi sus"></a>
+            <a href="#" id="sagetica"></a>
+        </div>
+        <address>
+            Strada x, nr 1, Bucuresti, sector 3, Romania <br/>
+            <a href="tel:+40720424123">Telefon</a><br/>
+            <a href="https://www.google.com/maps?q=Facultatea+de+Matematica+si+Informatica" target="_blank">Adresa</a><br>
+            <a href="mailto:GadgetHaven@gmail.com">E-mail</a><br/>
+            <a href="https://wa.me/1XXXXXX">Whatsapp</a><br/>
+            <a href="skype:utilizator.fictiv?chat">Skype</a><br/>
+        </address>
+        <small>
+            Copyright &copy; <time datetime="2024-03-10 15:53">duminica, 10 martie 2024</time>
+        </small>
+    </footer>
+    <div class="watermark">
+        <div>Georgescu</div>
+        <div>Andrei</div>
+    </div>
+</body>
 </html>

@@ -1,36 +1,68 @@
+:root {
+    --spatiere-mare: 200px;
+    --spatiere-medie: 100px;
+    --spatiere-mica: 50px;
+    --grid-gap-mare: 20px;
+    --grid-gap-mediu: 15px;
+    --grid-gap-mic: 10px;
+    --padding-text: 15px;
+    --font-size-mare: 18px;
+    --font-size-mediu: 16px;
+    --font-size-mic: 14px;
+}
+
 body {
     --culoare-principala: #4BA3CC;
     --culoare-inchisa: #2F6680;
     --culoare-deschisa: #489CC3;
     --culoare-intermediara: #3C81A2;
     --culoare-foarte-inchisa: #234B5E;
+    --culoare-spre-negru: #172e38;
     --culoare-foarte-deschisa: rgb(96, 205, 255);
-    --dim-spatiere: 200px;
-    padding-left: var(--dim-spatiere);
-    padding-right: var(--dim-spatiere);
+    padding-left: var(--spatiere-mare);
+    padding-right: var(--spatiere-mare);
+    font-family: 'Roboto', sans-serif;    
+    font-size: var(--font-size-mare);
+    transition: font-size 0.5s linear;
 }
 
+/* header, footer, section, nav, div {
+    background-color: var(--culoare-deschisa);
+    border: 1px solid var(--culoare-inchisa);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: var(--padding-text);
+} */
 
-#tab-orar th, #tab-orar td{
+img, video {
+    width: 100%;
+    max-width: 800px;
+    min-width: 200px;
+    height: auto;
+}
+
+#tab-orar th, #tab-orar td {
     border: 1px solid black;
     padding: 10px;
     transition: all 1.5s linear;
 }
 
 #tab-orar {
-    border-spacing: 0px;
+    width: 100%;
+    border-spacing: 0;
     border-collapse: collapse;
+    margin: 0;
 }
 
-#tab-orar thead th:nth-child(2n){ /* :nth-of-type(2n) */
-    background-color: aquamarine;
+#tab-orar thead th:nth-child(2n) {
+    background-color: var(--culoare-foarte-deschisa);
 }
 
-#tab-orar td:hover{
+#tab-orar td:hover {
     background-color: var(--culoare-inchisa);
 }
 
-#tab-orar td[rowspan]:hover{
+#tab-orar td[rowspan]:hover {
     background-color: var(--culoare-deschisa);
 }
 
@@ -98,11 +130,58 @@ body {
     text-transform: uppercase;
 }
 
-main img{
+main img {
     width: 80%;
 }
 
-#orar{
+#orar {
     position: relative;
-    overflow-x: scroll;
+    overflow-x: auto;
+    padding: 0;
+    margin: 0;
+}
+
+/* Stiluri pentru secțiunea Galerie */
+#grid-galerie {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+#grid-galerie figure {
+    margin: 0;
+    padding: 0;
+    background: var(--culoare-deschisa);
+    border: 1px solid var(--culoare-inchisa);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px; /* setăm o înălțime fixă pentru figure */
+}
+
+#grid-galerie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* păstrează proporțiile imaginii și umple spațiul disponibil */
+}
+
+#grid-galerie figcaption {
+    padding: 10px;
+    text-align: center;
+    background: var(--culoare-inchisa);
+    color: var(--culoare-foarte-deschisa);
+}
+
+@media screen and (max-width: 1200px) {
+    #grid-galerie {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #grid-galerie {
+        grid-template-columns: 1fr;
+    }
 }

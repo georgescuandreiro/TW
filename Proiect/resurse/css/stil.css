@@ -1,16 +1,12 @@
-html{
+html {
     font-size: 17px;
     transition: all 0.5s linear;
 }
 
-
 p {
-   color: var(--culoare-deschisa);
-   background-color: var(--culoare1);
+    color: var(--culoare-deschisa);
+    background-color: var(--culoare1);
 }
-
-
- /* p.intro  Selecteaza toti parametrii din clasa intro */
 
 li {
     color: var(--culoare1);
@@ -20,30 +16,34 @@ h2 {
     border: 2px solid var(--culoare1);
 }
 
-.container-iframe{
+.container-iframe {
     display: flex;
-    flex-direction: row;    
-}
-.container-iframe>*{
-    border: 1px solid blueviolet;
+    flex-direction: row;
+    align-items: flex-start;
+    width: auto;
 }
 
-.taburi-iframe{
-    width: 700px;
-    display: table-column;
-    justify-content: center;
-}
-.taburi-iframe>a{
+.taburi-iframe a {
     display: block;
-    border: 1px solid green;
-    width: 170px;
-    height: 30px;
-    text-align: center;
-    border-radius: 10px;
-    line-height: 30px;
-    box-shadow: 0px 0px 5px 5px blue inset;
+    background-color: var(--culoare-deschisa);
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-left: 4px solid var(--culoare-inchisa);
+    border-top: 2px solid var(--culoare-deschisa);
+    border-bottom: 2px solid var(--culoare-deschisa);
+    margin-bottom: 2.5px;
+    transition: background-color 1.5s, border-color 1.5s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
-.container-iframe iframe, .taburi-iframe{
-    width: 100%;
+.taburi-iframe a:hover {
+    background-color: var(--culoare-foarte-inchisa);
+    border-color: var(--culoare-foarte-inchisa);
+}
+
+iframe {
+    border: 6px solid var(--culoare-spre-negru);
+    height: 315px;
 }

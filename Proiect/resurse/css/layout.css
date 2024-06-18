@@ -1,84 +1,61 @@
-
-
-/* # - se foloseste pentru id // . se foloseste pentru clasa */
-#grid-pagina {
+#grid-container {
     display: grid;
-    grid-gap: 10px;
-    grid-template-areas: "welcome welcome welcome"
-                         "promotii promotii orar"
-                         "fig1 produse produse"
-                         "fig2 produse produse"
-                         "fig3 produse produse"
-                         "anunturi anunturi index-intrebari";
-} 
-#grid-pagina>*{
-    outline: 2px solid var(--culoare1)
+    grid-gap: var(--grid-gap-mare);
+    grid-template-areas: 
+        "zona1 zona1 zona1 zona1"
+        "zona5 zona6 zona6 zona7"
+        "zona3 zona3 zona2 zona2"
+        "zona4 zona4 zona2 zona2"
+        "zona8 zona8 zona8 zona8";
 }
 
-#welcome{
-    grid-area: welcome;
-}
-#promotii{
-    grid-area: promotii;
-}
-#anunturi{
-    grid-area: anunturi;
-}
-#orar{
-    grid-area: orar;
-}
- 
-#fig1{
-    grid-area: fig1;
-}
-#fig2{
-    grid-area: fig2;
-}
-#fig3{
-    grid-area: fig3;
-}
-#produse{
-    grid-area: produse;
-}
-#index-intrebari{
-    grid-area: index-intrebari;
+.zona {
+    padding: var(--padding-text);
+    border: 1px solid var(--culoare-inchisa);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#fig1, #fig2, #fig3{
-    margin: 0;
-}
+#zona1 { grid-area: zona1; }
+#zona2 { grid-area: zona2; }
+#zona3 { grid-area: zona3; }
+#zona4 { grid-area: zona4; }
+#zona5 { grid-area: zona5; }
+#zona6 { grid-area: zona6; }
+#zona7 { grid-area: zona7; }
+#zona8 { grid-area: zona8; }
 
-@media screen and (max-width:1200px) {
-    html{
-        font-size: 15px;
-        
-    }
+@media screen and (max-width: 1200px) {
     body {
-        --dim-spatiere:100px;
+        padding-left: var(--spatiere-medie);
+        padding-right: var(--spatiere-medie);
+        font-size: var(--font-size-mediu);
     }
 
+    #grid-container {
+        grid-gap: var(--grid-gap-mediu);
+        grid-template-areas: 
+            "zona1 zona1"
+            "zona2 zona3"
+            "zona4 zona4"
+            "zona5 zona6"
+            "zona7 zona8";
+    }
 }
 
-    #grid-pagina {
-        display: grid;
-        grid-gap: 10px;
-        grid-template-areas: "welcome welcome "
-                             "promotii promotii"
-                             "fig1 orar"
-                             "fig2 produse"
-                             "fig3 produse"
-                             "anunturi index-intrebari";
-    } 
-
-@media screen and (max-width:800px) {
-    html{
-        font-size: 12px;
-        
-    }
+@media screen and (max-width: 800px) {
     body {
-        --dim-spatiere:50px;
+        padding-left: var(--spatiere-mica);
+        padding-right: var(--spatiere-mica);
+        font-size: var(--font-size-mic);
     }
-    #grid-pagina{
+
+    #grid-container {
         display: block;
+        grid-gap: var(--grid-gap-mic);
+    }
+
+    .zona {
+        margin-bottom: var(--grid-gap-mic);
     }
 }
