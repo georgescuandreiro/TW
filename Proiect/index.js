@@ -5,10 +5,10 @@ const fs = require('fs');
 const app = express();
 const port = 8080;
 
-// Servește fișierele statice
+// E7 Servește fișierele statice
 app.use('/resurse', express.static(path.join(__dirname, 'resurse')));
 
-// Middleware pentru a verifica accesul la folderele din `/resurse` fără specificarea unui fișier
+// E17 Middleware pentru a verifica accesul la folderele din `/resurse` fără specificarea unui fișier
 app.use('/resurse', (req, res, next) => {
     const requestedPath = path.join(__dirname, 'resurse', req.path);
     if (fs.existsSync(requestedPath) && fs.lstatSync(requestedPath).isDirectory()) {
@@ -17,7 +17,7 @@ app.use('/resurse', (req, res, next) => {
     next();
 });
 
-// Middleware pentru a gestiona cererile către fișiere `.ejs`
+// E19 Middleware pentru a gestiona cererile către fișiere `.ejs`
 app.use((req, res, next) => {
     if (req.path.endsWith('.ejs')) {
         return afisareEroare(res, 400, "Cerere invalidă", "Nu puteți accesa direct fișierele de template.", "400.png");
@@ -25,7 +25,7 @@ app.use((req, res, next) => {
     next();
 });
 
-// Ruta pentru favicon.ico
+// E18 Ruta pentru favicon.ico
 app.get('/favicon.ico', (req, res) => {
     res.sendFile(path.join(__dirname, 'resurse/favicon/favicon.ico'));
 });
@@ -36,7 +36,7 @@ app.set('view engine', 'ejs');
 // Setează folderul pentru vizualizări
 app.set('views', path.join(__dirname, 'views'));
 
-// Variabilă globală pentru erori
+// E13 Variabilă globală pentru erori
 const obGlobal = {
     obErori: null
 };
@@ -70,7 +70,7 @@ function getClientIp(req) {
     return req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 }
 
-// Rute pentru paginile principale
+// E8 Rute pentru paginile principale
 app.get(['/', '/index', '/home'], (req, res) => {
     const userIp = getClientIp(req);
     res.render('pagini/index', {
@@ -80,7 +80,7 @@ app.get(['/', '/index', '/home'], (req, res) => {
     });
 });
 
-// Rută generală pentru pagini
+// E9 + E10 Rută generală pentru pagini
 app.get('/*', (req, res) => {
     const userIp = getClientIp(req);
     const pagina = req.params[0];
@@ -106,7 +106,7 @@ app.listen(port, () => {
     console.log(`Folderul curent de lucru: ${process.cwd()}`);
 });
 
-// Vector de foldere pentru crearea acestora
+// E20 Vector de foldere pentru crearea acestora
 const vect_foldere = ["temp"];
 
 vect_foldere.forEach(folder => {

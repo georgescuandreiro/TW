@@ -9,6 +9,10 @@
     --font-size-mare: 18px;
     --font-size-mediu: 16px;
     --font-size-mic: 14px;
+    --culoare-vizitat: #3C81A2; /* Culoare diferită pentru linkuri vizitate */
+    --culoare-link: #234B5E; /* Culoare implicită pentru linkuri */
+    --culoare-hover: #489CC3; /* Culoare la hover pentru linkuri externe */
+    --culoare-pata: rgba(72, 156, 195, 0.4); /* Culoare pentru pata */
 }
 
 body {
@@ -184,4 +188,51 @@ main img {
     #grid-galerie {
         grid-template-columns: 1fr;
     }
+}
+
+/* Linkuri vizitate */
+a:visited {
+    color: var(--culoare-vizitat);
+}
+
+/* Linkuri externe */
+a[href^="http"]:not([target="ifr-video"])::before {
+    content: "⮳";
+    font-size: 1.5em; /* 50% mai mare decât dimensiunea fontului linkului */
+    margin-right: 0.5em;
+    color: var(--culoare-link);
+    transition: color 0.3s;
+}
+
+a[href^="http"]:not([target="ifr-video"]):hover::before {
+    color: var(--culoare-hover);
+}
+
+/* Linkuri din conținutul paginii */
+main a:not([href^="http"]) {
+    position: relative;
+    color: var(--culoare-link);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+main a:not([href^="http"])::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, var(--culoare-pata) 0%, var(--culoare-pata) 40%, transparent 80%, transparent 100%);
+    transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 50%;
+}
+
+main a:not([href^="http"]):hover::before {
+    width: 200%;
+    height: 100%;
+    background-size: 100% 100%;
+    border-radius: 50%;
 }

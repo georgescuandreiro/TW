@@ -1,0 +1,19 @@
+/* resurse/css/vtt.css */
+::cue {
+    background: white;
+    color: #234B5E; /* Culoare închisă conform schemei cromatice */
+    text-align: center;
+    position: absolute;
+    padding: 0.1em;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+::cue(i) {
+    font-style: italic;
+}
+
+/* video::cue {
+    line: 0; 
+} */
