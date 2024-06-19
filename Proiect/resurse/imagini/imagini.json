@@ -1,0 +1,131 @@
+{
+    "cale_galerie": "/resurse/imagini/",
+    "imagini": [
+        {
+            "cale_imagine": "apple-watch-series-7.jpg",
+            "titlu": "Apple Watch Series 7",
+            "descriere": "Smart Watch Apple",
+            "sfert_ora": "2"
+        },
+        {
+            "cale_imagine": "gopro-hero10.jpg",
+            "titlu": "GoPro HERO10",
+            "descriere": "Camera de acțiune GoPro",
+            "sfert_ora": "1"
+        },
+        {
+            "cale_imagine": "kindle-paperwhite.jpg",
+            "titlu": "Kindle Paperwhite",
+            "descriere": "E-reader Kindle",
+            "sfert_ora": "1"
+        },
+        {
+            "cale_imagine": "laptop-acer.png",
+            "titlu": "Laptop Acer",
+            "descriere": "Laptop Acer performant",
+            "sfert_ora": "2"
+        },
+        {
+            "cale_imagine": "laptop-hp-spectre.jpg",
+            "titlu": "Laptop HP Spectre",
+            "descriere": "Laptop HP elegant",
+            "sfert_ora": "2"
+        },
+        {
+            "cale_imagine": "laptop-lenovo.png",
+            "titlu": "Laptop Lenovo",
+            "descriere": "Laptop Lenovo fiabil",
+            "sfert_ora": "2"
+        },
+        {
+            "cale_imagine": "laptop-macbook-pro.png",
+            "titlu": "Laptop MacBook Pro",
+            "descriere": "Laptop Apple MacBook Pro",
+            "sfert_ora": "2"
+        },
+        {
+            "cale_imagine": "logitech-mx-master-3.jpg",
+            "titlu": "Mouse Logitech MX Master 3",
+            "descriere": "Mouse Logitech wireless",
+            "sfert_ora": "2"
+        },
+        {
+            "cale_imagine": "Asus-zephyr.png",
+            "titlu": "Asus Zephyrus G14",
+            "descriere": "Laptop Asus",
+            "sfert_ora": "1"
+        },
+        {
+            "cale_imagine": "Canon-eos.png",
+            "titlu": "Canon EOS R5",
+            "descriere": "Camera video Canon",
+            "sfert_ora": "2"
+        },
+        {
+            "cale_imagine": "ClickNovaUltra.png",
+            "titlu": "ClickNova Ultra",
+            "descriere": "Tastatură mecanică ClickNova",
+            "sfert_ora": "3"
+        },
+        {
+            "cale_imagine": "DJI-Phantom-4-Pro.png",
+            "titlu": "DJI Phantom 4 Pro",
+            "descriere": "Dronă DJI",
+            "sfert_ora": "4"
+        },
+        {
+            "cale_imagine": "FlexTypeErgo.png",
+            "titlu": "FlexType Ergo",
+            "descriere": "Tastatură membrană FlexType",
+            "sfert_ora": "1"
+        },
+        {
+            "cale_imagine": "Jabra-Elite-85h.png",
+            "titlu": "Jabra Elite 85h",
+            "descriere": "Căști wireless Jabra",
+            "sfert_ora": "2"
+        },
+        {
+            "cale_imagine": "joystick-nintendo.png",
+            "titlu": "Nintendo Switch Joystick",
+            "descriere": "Joystick Nintendo Switch",
+            "sfert_ora": "3"
+        },
+        {
+            "cale_imagine": "Key-Force-Titan.png",
+            "titlu": "KeyForce Titan",
+            "descriere": "Tastatură mecanică KeyForce",
+            "sfert_ora": "4"
+        },
+        {
+            "cale_imagine": "MechMasterPro.png",
+            "titlu": "MechMaster Pro",
+            "descriere": "Tastatură mecanică MechMaster",
+            "sfert_ora": "1"
+        },
+        {
+            "cale_imagine": "Parrot-Anafi.png",
+            "titlu": "Parrot Anafi",
+            "descriere": "Dronă Parrot",
+            "sfert_ora": "2"
+        },
+        {
+            "cale_imagine": "Samsung-Galaxy-Tab.png",
+            "titlu": "Samsung Galaxy Tab S7",
+            "descriere": "Tableta Samsung",
+            "sfert_ora": "3"
+        },
+        {
+            "cale_imagine": "Sennheiser.png",
+            "titlu": "Sennheiser Momentum 3",
+            "descriere": "Căști wireless Sennheiser",
+            "sfert_ora": "4"
+        },
+        {
+            "cale_imagine": "SteelKeyDominator.png",
+            "titlu": "SteelKey Dominator",
+            "descriere": "Tastatură mecanică SteelKey",
+            "sfert_ora": "1"
+        }
+    ]
+}
