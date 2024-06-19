@@ -1,0 +1,180 @@
+<%- include('../fragmente/head', { titlu: 'Gadget Haven', descriere: 'Descoperă gadgeturile viitorului la GadgetHaven, unde tehnologia se împletește cu pasiunea și inovația prinde viață. De la dispozitive inteligente la accesorii high-tech, suntem puntea către un univers digital fascinant. Bine ai venit în lumea noastră a electronicii!' }) %>
+<%- include('../fragmente/header') %>
+<%- include('../fragmente/nav') %>
+<main>
+    <div id="grid-container">
+        <section id="zona1" class="zona">
+            <h2>Prezentare</h2>
+            <p><b>Gadget Haven</b> este locul unde tehnologia prinde viață. Oferim o gamă largă de dispozitive electronice și accesorii high-tech. </p>
+        </section>
+        <section id="zona5" class="zona">
+            <h2>Utilizatori online</h2>
+            <p>Utilizatori online: <b>34</b></p>
+        </section>
+        <section id="zona6" class="zona">
+            <h2>Date despre utilizator și statistici</h2>
+            <p>Contul dvs.: <b>Utilizator Premium</b> <i class="fa-solid fa-crown"></i></p>
+            <p>Comenzi efectuate: <b>12</b></p>
+            <p>IP-ul dvs.: <b><%= ip %></b></p>
+        </section>
+        <section id="zona7" class="zona">
+            <h2>Date despre site și server</h2>
+            <p><i class="fa-solid fa-server"></i> Uptime server: <b>99.99%</b></p>
+            <p><i class="fa-brands fa-product-hunt"></i>Număr total de produse: <b>345</b></p>
+        </section>
+        <section id="zona3" class="zona">
+            <h2>Calendar de evenimente</h2>
+            <p>Nu ratați evenimentele noastre speciale de <i>Black Friday</i> și <i>Cyber Monday</i>!</p>
+        </section>
+        <section id="zona2" class="zona">
+            <h2>Tabel orar</h2>
+            <table id="tab-orar">
+                <thead>
+                    <tr>
+                        <th>Cod</th>
+                        <th>Perioadă</th>
+                        <th>Zi</th>
+                        <th>Interval dimineață</th>
+                        <th>Pauză de masă</th>
+                        <th>Interval seară</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td rowspan="5">Zile<br/><strong title="Zile Lucrătoare">Lucrătoare</strong></td>
+                        <td>Luni</td>
+                        <td>9-12</td>
+                        <td>12-14</td>
+                        <td>14-20</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Marți</td>
+                        <td>9-12</td>
+                        <td>12-14</td>
+                        <td>14-21</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Miercuri</td>
+                        <td>9-11</td>
+                        <td>11-13</td>
+                        <td>14-21</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Joi</td>
+                        <td>9-11</td>
+                        <td>11-13</td>
+                        <td>14-21</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Vineri</td>
+                        <td>9-12</td>
+                        <td>12-14</td>
+                        <td>14-19</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2">Weekend</td>
+                        <td>Sâmbătă</td>
+                        <td>10-12</td>
+                        <td>12-13</td>
+                        <td>13-16</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Duminică</td>
+                        <td>10-14</td>
+                        <td>-</td>
+                        <td>Închis</td>
+                    </tr>
+                </tbody>
+                <tfoot><tr><td colspan="6">Închis cu ocazia sărbătorilor legale.</td></tr></tfoot>
+            </table>
+        </section>
+        <section id="zona4" class="zona">
+            <h2>Anunțuri</h2>
+            <p><b>Promoții speciale</b> la toate laptopurile și perifericele noastre!</p>
+            <details>
+                <summary>Detalii promoții</summary>
+                <p>Oferim reduceri de până la 50% pentru anumite produse.</p>
+            </details>
+            <h3 class="titlu">Super ofertă de weekend</h3>
+            <p><b>Gadget Haven</b> oferă <b>reduceri de <s>10%</s> <ins datetime="2024-03-19">15%</ins></b> pentru toate produsele cumpărate în intervalul 10-14.</p>
+            <p>Oferta este valabilă doar în zilele de sâmbătă și duminică la sediile <abbr title="Gadget Haven">GH</abbr>.</p>
+            <p>În cazul în care cumpărați mai mult de zece produse primiți și un card de fidelitate pentru Salvare!</p>
+        </section>
+        <section id="zona8" class="zona">
+            <h2>Alte tipuri de conținut</h2>
+            <p>Descoperă cele mai noi gadgeturi și tehnologii la Gadget Haven!</p>
+            <ol>
+                <li>Laptopuri de top</li>
+                <li>Telefoane performante</li>
+                <li>Accesorii inovative</li>
+            </ol>
+            <h2>Intrebari frecvente <abbr>FAQ</abbr></h2>
+            <details><summary>Cum pot să returnez un produs defect?</summary>
+                <p>Contactați serviciul nostru de asistență clienți la numărul de telefon afișat pe site.</p>
+            </details>
+            <details><summary>Cum pot să verific starea comenzii mele?</summary>
+                <p>Pentru a verifica starea comenzii, accesați secțiunea “Urmărirea comenzii” de pe site-ul nostru. Introduceți numărul comenzii și adresa de e-mail asociată pentru a afla detalii despre livrare.</p>
+            </details>
+            <details><summary>Care sunt opțiunile de plată acceptate?</summary>
+                <p>Acceptăm plăți cu carduri de credit/debit, PayPal și plata la livrare. Alegeți metoda preferată la finalizarea comenzii.</p>
+            </details>
+            <details><summary>Cum pot să contactez serviciul clienți</summary>
+                <p>Suntem disponibili pentru asistență la numărul de telefon afișat pe site sau prin e-mail la adresa contact@gadgethaven.ro.</p>
+            </details>
+        </section>
+    </div>
+    <section id="galerie-statica">
+        <h2>Galerie</h2>
+        <div id="grid-galerie">
+            <!-- Exemplu de figuri pentru galerie -->
+            <figure>
+                <img src="resurse/imagini/apple-watch-series-7.jpg" alt="smart-watch">
+                <figcaption>Apple Watch Series 7</figcaption>
+            </figure>
+            <figure>
+                <img src="resurse/imagini/gopro-hero10.jpg" alt="camere">
+                <figcaption>GoPro HERO10</figcaption>
+            </figure>
+            <figure>
+                <img src="resurse/imagini/kindle-paperwhite.jpg" alt="e-reader">
+                <figcaption>Kindle Paperwhite</figcaption>
+            </figure>
+            <figure>
+                <img src="resurse/imagini/laptop-acer.png" alt="laptopuri">
+                <figcaption>Laptop Acer</figcaption>
+            </figure>
+            <figure>
+                <img src="resurse/imagini/laptop-hp-spectre.jpg" alt="laptopuri">
+                <figcaption>Laptop HP Spectre</figcaption>
+            </figure>
+            <figure>
+                <img src="resurse/imagini/oculus-quest-2.jpg" alt="VR">
+                <figcaption>Oculus Quest 2</figcaption>
+            </figure>
+            <figure>
+                <img src="resurse/imagini/logitech-mx-master-3.jpg" alt="periferice">
+                <figcaption>Mouse Logitech MX Master 3</figcaption>
+            </figure>
+        </div>
+    </section>
+    <section id="oferte">
+        <h2>Prezentare oferte</h2>
+        <p>Top oferte</p>
+        <div class="container-iframe">
+            <div class="taburi-iframe">
+                <a href="https://www.youtube.com/embed/jXBX0WZpppM?si=LYprRdCj1CUsYNle" target="ifr-video">Laptop Acer</a>
+                <a href="https://www.youtube.com/embed/3jK6zcGCKVA?si=bddUdB-xuYvBAdRP" target="ifr-video">Laptop Lenovo</a>
+                <a href="https://www.youtube.com/embed/0pg_Y41waaE" target="ifr-video">Laptop MacBook Pro</a>
+            </div>
+            <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/jXBX0WZpppM?si=LYprRdCj1CUsYNle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+</main>
+<%- include('../fragmente/footer') %>
