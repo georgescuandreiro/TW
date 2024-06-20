@@ -1,0 +1,86 @@
+// print.scss
+@media print {
+  // Ascundem toate elementele media
+  img, video, iframe, .container-iframe, .taburi-iframe, #link-top, .container, #hamburger, #ch-menu {
+    display: none !important;
+  }
+
+  // Afișăm gridul ca block
+  #grid-container {
+    display: block !important;
+  }
+
+  // Stilizăm bannerul pentru printare
+  header {
+    position: absolute;
+    bottom: 0;
+    width: 70%;
+    border: 4px inset black;
+    text-align: center;
+    left: 15%;
+    right: 15%;
+  }
+
+  // Heading-ul H1 centrat și meniul sub formă de listă neordonată
+  h1 {
+    text-align: center;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li ul {
+    display: none;
+  }
+
+  // Page break după meniu și înainte de footer
+  nav + * {
+    page-break-before: always;
+  }
+
+  footer {
+    page-break-before: always;
+  }
+
+  // Stilizăm watermark-ul
+  .watermark {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 4cm;
+    height: 1cm;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // Margini diferite pentru paginile din stânga și dreapta
+  @page :left {
+    margin-left: 3cm;
+    margin-right: 1cm;
+  }
+
+  @page :right {
+    margin-left: 1cm;
+    margin-right: 3cm;
+  }
+
+  // Eliminăm stilurile de link (subliniere și culoare)
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+}

@@ -1,6 +1,17 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import 'variables';
+@import 'nav';
+@import 'general';
+@import 'layout';
+@import 'print';
+@import 'reset';
+@import 'stil';
+@import 'vtt';
+
+// Definirea variabilelor personalizate
 $culoare-deschisa: #489CC3;
 $culoare-inchisa: #2F6680;
-$culoare-text-meniu: black;
+$culoare-text-meniu: white;
 $culoare-text-meniu-selectat: white;
 $transition-time: 0.3s;
 $padding: 10px;
@@ -14,7 +25,7 @@ nav {
     top: 0;
     width: 100%;
     z-index: 100;
-    
+
     #hamburger {
         display: none;
     }
@@ -29,7 +40,8 @@ nav {
         li {
             position: relative;
 
-            > div, > a {
+            > div,
+            > a {
                 display: block;
                 padding: $padding;
                 text-decoration: none;
@@ -107,19 +119,20 @@ nav {
     nav {
         ul {
             li {
-                > div, > a {
+                > div,
+                > a {
                     font-size: 0.8rem;
                 }
             }
         }
     }
 
-    #acasa span {
-        display: block;
+    #home-icon span {
+        display: none;
     }
 
-    #acasa div {
-        display: none;
+    #home-icon i {
+        margin-right: 0;
     }
 }
 
@@ -151,18 +164,10 @@ nav {
         ul ul {
             position: static;
             display: none;
-
-            li {
-                a {
-                    padding-left: 20px;
-                }
-            }
         }
 
         ul li:hover ul {
             display: block;
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            transition: clip-path $transition-time;
         }
     }
 }

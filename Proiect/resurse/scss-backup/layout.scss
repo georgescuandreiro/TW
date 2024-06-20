@@ -1,0 +1,80 @@
+// layout.scss
+@import "variables";
+
+#grid-container {
+  display: grid;
+  grid-gap: $grid-gap-mare;
+  grid-template-areas:
+    "zona1 zona1 zona1 zona1"
+    "zona5 zona6 zona6 zona7"
+    "zona3 zona3 zona2 zona2"
+    "zona4 zona4 zona2 zona2"
+    "zona8 zona8 zona8 zona8";
+}
+
+.zona {
+  padding: $padding-text;
+  border: 1px solid $culoare-inchisa;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#zona1 {
+  grid-area: zona1;
+}
+#zona2 {
+  grid-area: zona2;
+}
+#zona3 {
+  grid-area: zona3;
+}
+#zona4 {
+  grid-area: zona4;
+}
+#zona5 {
+  grid-area: zona5;
+}
+#zona6 {
+  grid-area: zona6;
+}
+#zona7 {
+  grid-area: zona7;
+}
+#zona8 {
+  grid-area: zona8;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    padding-left: $spatiere-medie;
+    padding-right: $spatiere-medie;
+    font-size: $font-size-mediu;
+  }
+
+  #grid-container {
+    grid-gap: $grid-gap-mediu;
+    grid-template-areas:
+      "zona1 zona1"
+      "zona2 zona3"
+      "zona4 zona4"
+      "zona5 zona6"
+      "zona7 zona8";
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    padding-left: $spatiere-mica;
+    padding-right: $spatiere-mica;
+    font-size: $font-size-mic;
+  }
+
+  #grid-container {
+    display: block;
+    grid-gap: $grid-gap-mic;
+  }
+
+  .zona {
+    margin-bottom: $grid-gap-mic;
+  }
+}

@@ -1,0 +1,124 @@
+// Import Bootstrap SCSS
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Customizare variabile Bootstrap
+
+// Culori personalizate pentru temă
+$theme-colors: (
+  "primary": #4BA3CC,
+  "secondary": #2F6680,
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": #f8f9fa,
+  "dark": #343a40,
+  "tema1-bg": #ffffff,
+  "tema1-text": #234B5E,
+  "tema2-bg": #343a40,
+  "tema2-text": #f8f9fa
+);
+
+// Fundalul paginii și culoarea textului
+$body-bg: #f8f9fa;
+$text-color: #234B5E;
+
+// Familia de font și dimensiunea de bază
+$font-family-base: 'Roboto', sans-serif;
+$font-size-base: 1rem;
+
+// Heading-uri
+$headings-font-family: 'Roboto', sans-serif;
+$headings-font-weight: 700;
+$headings-line-height: 1.2;
+$headings-color: inherit;
+
+// Dimensiuni de ecran
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Dimensiunea razei de border
+$border-radius: 0.25rem;
+$border-radius-lg: 0.3rem;
+$border-radius-sm: 0.2rem;
+
+// Variabile adiționale personalizate
+$spatiere-mare: 200px;
+$spatiere-medie: 100px;
+$spatiere-mica: 50px;
+$grid-gap-mare: 20px;
+$grid-gap-mediu: 15px;
+$grid-gap-mic: 10px;
+$padding-text: 15px;
+$font-size-mare: 18px;
+$font-size-mediu: 16px;
+$font-size-mic: 14px;
+$culoare-vizitat: #3C81A2;
+$culoare-link: #234B5E;
+$culoare-hover: #489CC3;
+$culoare-pata: rgba(72, 156, 195, 0.4);
+
+// Override default Bootstrap variables
+// $body-bg: $tema1-bg;
+// $text-color: $tema1-text;
+
+// Customizare pentru butoane
+$btn-primary-bg: $primary;
+$btn-primary-border: $primary;
+$btn-primary-hover-bg: darken($primary, 10%);
+$btn-primary-hover-border: darken($primary, 10%);
+
+// Dimensiuni heading-uri
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
+
+// Alte stiluri personalizate
+body {
+    background-color: $body-bg;
+    color: $text-color;
+    font-family: $font-family-base;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    color: $headings-color;
+}
+
+h1 { font-size: $h1-font-size; }
+h2 { font-size: $h2-font-size; }
+h3 { font-size: $h3-font-size; }
+h4 { font-size: $h4-font-size; }
+h5 { font-size: $h5-font-size; }
+h6 { font-size: $h6-font-size; }
+
+// Customizare pentru layout-uri pe ecrane medii și mari
+@media (min-width: map-get($grid-breakpoints, md)) {
+    body {
+        padding-left: $spatiere-medie;
+        padding-right: $spatiere-medie;
+        font-size: $font-size-mediu;
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    body {
+        padding-left: $spatiere-mare;
+        padding-right: $spatiere-mare;
+        font-size: $font-size-mare;
+    }
+}
+
+// Import Bootstrap din nou pentru a aplica toate modificările
+@import "node_modules/bootstrap/scss/bootstrap";

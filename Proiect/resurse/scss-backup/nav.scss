@@ -1,0 +1,264 @@
+// nav.scss
+@import "variables";
+
+nav {
+  height: $inaltime-meniu;
+  background-color: $culoare-deschisa;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  #hamburger {
+    display: none;
+  }
+
+  input#ch-menu {
+    display: none;
+  }
+
+  ul.meniu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+      position: relative;
+
+      > div,
+      > a {
+        display: block;
+        padding: 0 15px;
+        text-decoration: none;
+        color: white;
+        height: $inaltime-meniu;
+        line-height: $inaltime-meniu;
+        overflow: hidden;
+        position: relative;
+        transition: background-color 2s ease-in-out;
+
+        &:hover {
+          background-color: $culoare-inchisa;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 0;
+          height: 0;
+          background: radial-gradient($culoare-deschisa 0%, $culoare-intermediara);
+          transform: translate(-50%, -50%);
+          transition: width 2s ease-in-out, height 2s ease-in-out;
+          z-index: -1;
+        }
+
+        &:hover::before {
+          width: 300%;
+          height: 300%;
+        }
+      }
+
+      ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: $culoare-deschisa;
+        padding: 0;
+        list-style-type: none;
+        margin: 0;
+        width: 200px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+
+        li {
+          display: block;
+          text-align: left;
+
+          > a {
+            display: block;
+            padding: 10px;
+            color: black;
+            background-color: $culoare-deschisa;
+            position: relative;
+            transition: background-color 2s ease-in-out;
+
+            &:hover {
+              background-color: $culoare-inchisa;
+              color: white;
+              text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 0;
+              height: 0;
+              background: radial-gradient(circle, $culoare-inchisa 0%, $culoare-inchisa 100%);
+              transform: translate(-50%, -50%);
+              transition: width 2s ease-in-out, height 2s ease-in-out;
+              z-index: -1;
+            }
+
+            &:hover::before {
+              width: 300%;
+              height: 300%;
+            }
+          }
+        }
+      }
+
+      &:hover > ul {
+        display: block;
+        transform: scaleY(0) scaleX(0);
+        opacity: 0;
+        animation: showSubMenu 1s forwards;
+        transform-origin: top left;
+      }
+    }
+  }
+}
+
+@keyframes showSubMenu {
+  to {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  ul.meniu li > div,
+  ul.meniu li > a {
+    font-size: 0.8rem;
+  }
+
+  ul.meniu li#home-icon > div > .home-text {
+    display: none;
+  }
+
+  ul.meniu li#home-icon > div > .fas {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  ul.meniu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+
+    #hamburger {
+      display: block;
+      cursor: pointer;
+    }
+
+    input#ch-menu:checked + ul.meniu {
+      display: block;
+      position: absolute;
+      top: $inaltime-meniu;
+      width: 100%;
+      background: $culoare-deschisa;
+      animation: revealMenu 1s forwards;
+    }
+
+    input#ch-menu:checked + ul.meniu li {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+
+    input#ch-menu:checked + ul.meniu li > a,
+    input#ch-menu:checked + ul.meniu li > div {
+      padding: 1rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    ul.meniu li ul {
+      position: inherit;
+      top: 100%;
+      left: 33%;
+      transform: translateX(-50%);
+      max-height: none;
+      overflow-y: visible;
+    }
+
+    ul.meniu li:hover ul {
+      display: block;
+      transition: clip-path 0.3s;
+    }
+
+    @keyframes revealMenu {
+      0% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+      }
+      5% {
+        clip-path: polygon(0 0, 5% 0, 6% 50%, 5% 100%, 0 100%);
+      }
+      10% {
+        clip-path: polygon(0 0, 10% 0, 12% 50%, 10% 100%, 0 100%);
+      }
+      15% {
+        clip-path: polygon(0 0, 15% 0, 18% 50%, 15% 100%, 0 100%);
+      }
+      20% {
+        clip-path: polygon(0 0, 20% 0, 25% 50%, 20% 100%, 0 100%);
+      }
+      25% {
+        clip-path: polygon(0 0, 25% 0, 31% 50%, 25% 100%, 0 100%);
+      }
+      30% {
+        clip-path: polygon(0 0, 30% 0, 37% 50%, 30% 100%, 0 100%);
+      }
+      35% {
+        clip-path: polygon(0 0, 35% 0, 43% 50%, 35% 100%, 0 100%);
+      }
+      40% {
+        clip-path: polygon(0 0, 40% 0, 50% 50%, 40% 100%, 0 100%);
+      }
+      45% {
+        clip-path: polygon(0 0, 45% 0, 56% 50%, 45% 100%, 0 100%);
+      }
+      50% {
+        clip-path: polygon(0 0, 50% 0, 62% 50%, 50% 100%, 0 100%);
+      }
+      55% {
+        clip-path: polygon(0 0, 55% 0, 68% 50%, 55% 100%, 0 100%);
+      }
+      60% {
+        clip-path: polygon(0 0, 60% 0, 74% 50%, 60% 100%, 0 100%);
+      }
+      65% {
+        clip-path: polygon(0 0, 65% 0, 80% 50%, 65% 100%, 0 100%);
+      }
+      70% {
+        clip-path: polygon(0 0, 70% 0, 86% 50%, 70% 100%, 0 100%);
+      }
+      75% {
+        clip-path: polygon(0 0, 75% 0, 92% 50%, 75% 100%, 0 100%);
+      }
+      80% {
+        clip-path: polygon(0 0, 80% 0, 98% 50%, 80% 100%, 0 100%);
+      }
+      85% {
+        clip-path: polygon(0 0, 85% 0, 99% 50%, 85% 100%, 0 100%);
+      }
+      90% {
+        clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+      }
+      95% {
+        clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+      }
+      100% {
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%);
+      }
+    }
+  }
+}

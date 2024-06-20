@@ -1,0 +1,38 @@
+// variables.scss
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #234B5E;
+    --link-hover-color: #489CC3;
+}
+
+[data-theme="dark"] {
+    --background-color: #343a40;
+    --text-color: #f8f9fa;
+    --link-color: #f8f9fa;
+    --link-hover-color: #17a2b8;
+}
+
+
+$spatiere-mare: 200px;
+$spatiere-medie: 100px;
+$spatiere-mica: 50px;
+$grid-gap-mare: 20px;
+$grid-gap-mediu: 15px;
+$grid-gap-mic: 10px;
+$padding-text: 15px;
+$font-size-mare: 18px;
+$font-size-mediu: 16px;
+$font-size-mic: 14px;
+$culoare-vizitat: #3C81A2;
+$culoare-link: #234B5E;
+$culoare-hover: #489CC3;
+$culoare-pata: rgba(72, 156, 195, 0.4);
+$culoare-principala: #4BA3CC;
+$culoare-inchisa: #2F6680;
+$culoare-deschisa: #489CC3;
+$culoare-intermediara: #3C81A2;
+$culoare-foarte-inchisa: #234B5E;
+$culoare-spre-negru: #172e38;
+$culoare-foarte-deschisa: rgb(96, 205, 255);
+$inaltime-meniu: 2rem;

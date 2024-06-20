@@ -1,0 +1,52 @@
+// stil.scss
+@import "variables";
+
+html {
+  font-size: 17px;
+  transition: all 0.5s linear;
+}
+
+p {
+  color: var(--culoare-deschisa);
+  background-color: var(--culoare1);
+}
+
+li {
+  color: var(--culoare1);
+}
+
+h2 {
+  border: 2px solid var(--culoare1);
+}
+
+.container-iframe {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: auto;
+}
+
+.taburi-iframe a {
+  display: block;
+  background-color: var(--culoare-deschisa);
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-left: 4px solid var(--culoare-inchisa);
+  border-top: 2px solid var(--culoare-deschisa);
+  border-bottom: 2px solid var(--culoare-deschisa);
+  margin-bottom: 2.5px;
+  transition: background-color 1.5s, border-color 1.5s;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.taburi-iframe a:hover {
+  background-color: var(--culoare-foarte-inchisa);
+  border-color: var(--culoare-foarte-inchisa);
+}
+
+iframe {
+  border: 6px solid var(--culoare-spre-negru);
+  height: 315px;
+}
