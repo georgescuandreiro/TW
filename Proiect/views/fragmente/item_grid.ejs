@@ -1,0 +1,9 @@
+<div class="grid-container">
+  <% data.forEach((row) => { %>
+  <div class="grid-item" style="display: flex">
+    <div><img src="<%- row["imagine"] %>" style="width: 50%; max-width: 200px;"/></div>
+    <div><strong><%- row["nume"] %></strong></div>
+    <div>Pret: <%- row["pret"] %> RON</div>
+  </div>
+  <% }); %>
+</div>

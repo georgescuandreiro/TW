@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ro">
+<%- include('../fragmente/head', { titlu: 'Despre Gadget Haven' , descriere: 'Informații despre Gadget Haven, locul unde tehnologia prinde viață.', scripts:
+["https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js",
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"],
+styles:
+["https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"],})  %>
+<%- include('../fragmente/header') %>
+
+  <body>
+    <%- include('../fragmente/nav.ejs'); %>
+    <br />
+    <%- include('../fragmente/filter_modal.ejs'); %>
+    <br />
+    <%- include('../fragmente/item_grid.ejs'); %>
+  </body>
+
+  <%- include('../fragmente/footer') %>
+
+</html>

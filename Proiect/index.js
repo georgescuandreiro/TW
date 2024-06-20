@@ -3,9 +3,11 @@ const path = require('path');
 const fs = require('fs');
 const sass = require('sass'); // Înlocuit node-sass cu sass
 const sharp = require('sharp'); // Pentru redimensionarea imaginilor
+const AccesBD = require("./AccesBD");
 
 const app = express();
 const port = 8080;
+const dbCon = new AccesBD();
 
 // Variabile globale
 const obGlobal = {
@@ -100,6 +102,11 @@ app.set('views', path.join(__dirname, 'views'));
 // E7 Servește fișierele statice
 app.use('/resurse', express.static(path.join(__dirname, 'resurse')));
 
+app.use(express.static(__dirname));
+
+app.use(express.urlencoded({ extended: false })); //needed for getting POST data from req
+
+
 // E17 Middleware pentru a verifica accesul la folderele din `/resurse` fără specificarea unui fișier
 app.use('/resurse', (req, res, next) => {
     const requestedPath = path.join(__dirname, 'resurse', req.path);
@@ -189,6 +196,24 @@ app.get(['/', '/index', '/home'], (req, res) => {
         images: images,
         galleryPath: galleryPath
     });
+});
+
+// trending - produse din baza de date
+app.get("/trending", async (req, res) => {
+    const tableData = await dbCon.getAll();
+    res.render(
+        path.join(__dirname, "views", "pagini", "produse.ejs"),
+        { data: tableData }
+    );
+});
+
+app.post("/trendingFiltrate", async (req, res) => {
+    const typeFilter = Object.values(JSON.parse(JSON.stringify(req.body)));
+    const tableData = await dbCon.getByTypes(typeFilter);
+    res.render(
+        path.join(__dirname, "views", "pagini", "produse.ejs"),
+        { data: tableData }
+    );
 });
 
 // Ruta pentru galerie (pentru testare)

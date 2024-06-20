@@ -27,5 +27,15 @@
     <link rel="stylesheet" href="/resurse/css/print.css" type="text/css" media="print" />
     <link rel="stylesheet" href="/resurse/css/vtt.css" type="text/css" />
     <script src="/resurse/js/theme.js" defer></script>
+
+    <!-- inject more page specific styles here -->
+    <% if (typeof styles != "undefined") { %> <% styles.forEach((style) => { %>
+        <link rel="stylesheet" href="<%= style %>" />
+    <% }); %> <% } %>
+
+    <!-- inject scripts here -->
+    <% if (typeof scripts != "undefined") { %> <% scripts.forEach((script) => { %>
+        <script src="<%= script %>"></script>
+    <% }); %> <% } %>
 </head>
 <body>
